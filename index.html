@@ -61,6 +61,13 @@
 <div id="toasts" class="toasts" aria-live="polite"></div>
 
 <script src="vendor/ethers.umd.min.js"></script>
+<script>
+  // ethers.js may sit in vendor/ (local) or next to this file (GitHub upload); last resort: public CDN
+  if (!window.ethers) document.write('<script src="ethers.umd.min.js"><\/script>');
+</script>
+<script>
+  if (!window.ethers) document.write('<script src="https://cdn.jsdelivr.net/npm/ethers@6.16.0/dist/ethers.umd.min.js"><\/script>');
+</script>
 <script src="config.js"></script>
 <script src="members.js"></script>
 <script src="app.js"></script>
