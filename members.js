@@ -1,0 +1,9 @@
+// Generated from keys.env - PUBLIC addresses only, safe to publish.
+window.TOBESURE_MEMBERS = {
+  "0xd4556175F88cc8B8612177a771E75AacAB27eff9": "Platform",
+  "0xe29F54b272Aa949f73bEB279bAD7aFA3b2438Bca": "Max",
+  "0x65c7985712672d714c74889e18A0a7f5580C3cb9": "Ben",
+  "0x99FfF1EE1b20770cbcBe8F08EC898a2880B278bE": "Ale",
+  "0xbb47A8B156e552FF2793Bf81d17b974c6ed4B434": "Sarita",
+  "0xf43b78e1380F63C10E5035524D0d675F21dC3Ae5": "Anthony"
+};

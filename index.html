@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080B11">
+<title>TobesureMarket</title>
+<meta name="description" content="Group 3 — a Polymarket-style YES/NO prediction market on the Sepolia testnet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%23131A2A%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-size=%2220%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Arial%22 font-weight=%22bold%22%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo" aria-hidden="true">T</span>
+    <div>
+      <strong>TobesureMarket</strong>
+      <small>Group 3 · prediction market on Sepolia</small>
+    </div>
+  </div>
+  <div class="net" id="net"><span class="dot"></span><span id="netText">Connecting to Sepolia…</span></div>
+  <div class="wallet" id="wallet">
+    <button class="btn primary" id="connectBtn" type="button">Connect MetaMask</button>
+  </div>
+  <button class="btn ghost small" id="presentBtn" type="button" title="Larger text for the projector (shortcut: P)">Presenter view</button>
+</header>
+
+<div class="banner" id="banner" hidden></div>
+
+<main class="layout">
+  <aside class="markets card">
+    <div class="card-head"><h2>Markets <span class="muted small" id="marketCount" style="font-family:var(--body);font-weight:400"></span></h2><button class="btn ghost small" id="newTop" type="button">+ New</button></div>
+    <div id="marketList" class="market-list"><p class="muted pad">Loading markets…</p></div>
+    <div id="createBox"></div>
+  </aside>
+
+  <section class="detail" id="detail">
+    <div class="card pad"><p class="muted">Loading…</p></div>
+  </section>
+
+  <aside class="side">
+    <section class="card" id="walletsCard">
+      <div class="card-head"><h2>Group wallets</h2><span class="muted small">live balances</span></div>
+      <div id="wallets"></div>
+    </section>
+    <section class="card" id="feedCard">
+      <div class="card-head"><h2>On-chain activity</h2><span class="muted small" id="feedScope"></span></div>
+      <ol id="feed" class="feed"><li class="muted pad">Reading events…</li></ol>
+    </section>
+  </aside>
+</main>
+
+<footer class="foot">
+  <span>Contract <a id="contractLink" target="_blank" rel="noopener"></a></span>
+  <span class="muted">Every bet, fee and payout is enforced by the smart contract — this page only reads it and asks MetaMask to sign.</span>
+</footer>
+
+<div id="toasts" class="toasts" aria-live="polite"></div>
+
+<script src="vendor/ethers.umd.min.js"></script>
+<script src="config.js"></script>
+<script src="members.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
